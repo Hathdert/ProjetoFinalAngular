@@ -1,0 +1,103 @@
+:host {
+  background-image: url('https://images.wallpaperscraft.com/image/single/starry_sky_milky_way_night_124665_3840x2160.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 120vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff;
+  background-color: #1b251c;
+}
+
+.detalhes-container {
+  background: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(8px);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+  max-width: 600px;
+  width: 100%;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 80px;
+  text-shadow: 0 0 6px #fff;
+}
+
+.detalhe {
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+  background-color: rgba(255, 255, 255, 0.08);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.detalhecompleto {
+  margin-bottom: 50px;
+}
+
+.botoes {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+button {
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: 0.3s ease;
+}
+
+.btn-voltar {
+  background-color: #757575;
+  color: rgb(255, 255, 255);
+}
+
+.btn-voltar:hover {
+  background-color: #a0a0a0;
+}
+
+.btn-editar {
+  background-color: #17644b;
+  color: white;
+}
+
+.btn-editar:hover {
+  background-color: #34d399;
+}
+
+.foto {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 60px; 
+  height: 50px; 
+  margin-bottom: 70px;
+  margin-top: 20px;
+}
+
+.foto img.icone-membro {
+  position: absolute;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.foto h2 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  white-space: nowrap; 
+  line-height: 50px; 
+}

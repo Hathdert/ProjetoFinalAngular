@@ -1,0 +1,93 @@
+:host {
+  background-image: url('https://images.wallpaperscraft.com/image/single/starry_sky_milky_way_night_124665_3840x2160.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 120vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1b251c;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(8px);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+  max-width: 600px;
+  width: 100%;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.titulo {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 24px;
+  text-shadow: 0 0 6px #fff;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+input, select, textarea {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.85);
+  color: #1e293b;
+  font-size: 1rem;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.erro {
+  color: #f87171;
+  font-size: 0.9rem;
+}
+
+.botoes-form {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.btn-primario {
+  background-color: #969696;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primario:hover {
+  background-color: #7a7a7a;
+}
+
+.btn-secundario {
+  background-color: #6b1010;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-secundario:hover {
+  background-color: #f87171;
+}

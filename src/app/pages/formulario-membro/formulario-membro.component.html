@@ -1,0 +1,59 @@
+<div class="container">
+  <h2 class="titulo">
+    {{ id ? 'Editar Membro da Tripulação' : 'Adicionar Membro da Tripulação' }}
+  </h2>
+  <form [formGroup]="form" (ngSubmit)="submit()" class="formulario">
+    <label for="nome">Nome:</label>
+    <input id="nome" type="text" formControlName="nome" aria-describedby="nomeError" />
+    <div *ngIf="form.get('nome')?.invalid && form.get('nome')?.touched" id="nomeError" class="erro">
+      O nome é obrigatório.
+    </div>
+
+    <label for="especie">Espécie:</label>
+    <select id="especie" formControlName="especie" aria-describedby="especieError">
+      <option value="">Selecione...</option>
+      <option value="Humano">Humano</option>
+      <option value="Humanoide">Humanoide</option>
+      <option value="Grey 👽">Grey 👽</option>
+      <option value="Reptiliano 🦎">Reptiliano 🦎</option>
+      <option value="Nórdico 👱‍♂️">Nórdico 👱‍♂️</option>
+    </select>
+    <div *ngIf="form.get('especie')?.invalid && form.get('especie')?.touched" id="especieError" class="erro">
+      A espécie é obrigatória.
+    </div>
+
+    <label for="funcao">Função:</label>
+    <input id="funcao" type="text" formControlName="funcao" aria-describedby="funcaoError" />
+    <div *ngIf="form.get('funcao')?.invalid && form.get('funcao')?.touched" id="funcaoError" class="erro">
+      A função é obrigatória.
+    </div>
+
+    <label for="estado">Estado:</label>
+    <select id="estado" formControlName="estado" aria-describedby="estadoError">
+      <option value="Ativo">Ativo</option>
+      <option value="Em Missão">Em Missão</option>
+      <option value="De Férias">De Férias</option>
+      <option value="Em Descanso">Em Descanso</option>
+    </select>
+    <div *ngIf="form.get('estado')?.invalid && form.get('estado')?.touched" id="estadoError" class="erro">
+      O estado é obrigatório.
+    </div>
+
+    <label for="dataNascimentoCriacao">Data de Nascimento/Criação:</label>
+    <input id="dataNascimentoCriacao" type="date" formControlName="dataNascimentoCriacao" />
+
+    <label for="setorDepartamento">Setor/Departamento:</label>
+    <input id="setorDepartamento" type="text" formControlName="setorDepartamento" />
+
+    <label for="contactosEmergencia">Contactos de Emergência:</label>
+    <input id="contactosEmergencia" type="text" formControlName="contactosEmergencia" />
+
+    <label for="notasObservacoes">Notas/Observações:</label>
+    <textarea id="notasObservacoes" formControlName="notasObservacoes"></textarea>
+
+    <div class="botoes-form">
+      <button type="submit" [disabled]="form.invalid" class="btn-primario">Guardar</button>
+      <button type="button" (click)="cancelar()" class="btn-secundario">Cancelar</button>
+    </div>
+  </form>
+</div>

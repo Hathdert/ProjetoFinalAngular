@@ -1,0 +1,220 @@
+
+:host {
+  background-image: url('https://images.wallpaperscraft.com/image/single/starry_sky_milky_way_night_124665_3840x2160.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 120vh;
+  display: block;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #1b251c;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container {
+  min-height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  padding: 40px 20px;
+  box-sizing: border-box;
+  gap: 30px; 
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.titulo {
+  font-size: 2.8rem;
+  font-weight: 800;
+  text-align: center;
+  background: linear-gradient(90deg, #ffffff, #7a7a7a, #3b3d3f);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 8s linear infinite;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.tituloaluno {
+  font-size: 2.8rem;
+  font-weight: 200;
+  font-size: xx-large;
+  text-align: center;
+  background: linear-gradient(180deg, #ffffff, #ffffff, #3b3d3f);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s linear infinite;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+@keyframes shine {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+.lista-3d {
+  max-height: 700px;
+  overflow-y: auto;
+  padding-right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0);
+  width: 100%; 
+  max-width: 700px; 
+  margin: 0 auto;
+}
+
+.card {
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.card:hover {
+  transform: translateZ(20px) rotateX(5deg) rotateY(10deg);
+  box-shadow:
+    0 12px 30px rgba(0,0,0,0.5),
+    0 0 40px rgba(79, 185, 93, 0.6);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 230px;
+}
+
+.nome {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.estado {
+  font-size: 1rem;
+  font-style: italic;
+  transition: color 0.3s ease, transform 0.3s ease;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.estado:hover {
+  transform: scale(1.05);
+}
+
+.botoes button,
+.btn-novo {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  background-color: #505152;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  margin-left: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.botoes button:hover {
+  background-color: #838383;
+}
+
+.botoes button::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(255,255,255,0.2) 0%, transparent 70%);
+  animation: pulse 2s infinite ease-in-out;
+  border-radius: 8px;
+}
+
+.btn-novo {
+  background-color: #585858;
+  padding: 10px 24px;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-top: 20px;
+  align-self: center; 
+}
+
+.btn-novo:hover {
+  background-color: #828382;
+}
+
+.btn-novo::before {
+  border-radius: 12px;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 0.7; }
+  50% { transform: scale(1.5); opacity: 0; }
+}
+
+.lista-3d::-webkit-scrollbar {
+  width: 12px;
+}
+
+.lista-3d::-webkit-scrollbar-track {
+  background: #1e293b; 
+  border-radius: 10px;
+}
+
+.lista-3d::-webkit-scrollbar-thumb {
+  background-color: #4b4a4b; 
+  border-radius: 10px;
+  border: 2px solid #1e293b; 
+}
+
+.lista-3d::-webkit-scrollbar-thumb:hover {
+  background-color: #959596; 
+}
+
+.foto {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-left: 30px;
+}
+
+.foto img.icone-membro {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%; 
+  flex-shrink: 0;
+}
+

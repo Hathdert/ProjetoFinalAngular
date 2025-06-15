@@ -1,0 +1,31 @@
+<div class="container">
+  <h2 class="titulo">
+    <span class="nave">🚀</span>
+    Gestão da Tripulação da Nave Aurora
+    <span class="nave">🚀</span>
+  </h2>
+  <h2 class="tituloaluno">Hamilton César de Oliveira Pinto - Angular - NATIXIS</h2>
+
+  <div class="lista-3d">
+    <div class="card" *ngFor="let m of membros; let i = index" [style.animationDelay]="(0.1 + i * 0.5) + 's'">
+      <div class="foto">
+        <img src="https://mesmear.co.uk/wp-content/uploads/person-placeholder.jpg" alt="Ícone do membro"
+          class="icone-membro" />
+      </div>
+
+      <div class="info">
+
+        <div class="nome">{{ m.nome }} (ID:{{m.id}})</div>
+        <div class="Especie">{{ m.especie }} - {{ m.funcao }}</div>
+        <div class="estado" [ngStyle]="getEstiloEstado(m.estado)">{{ m.estado }}</div>
+      </div>
+      <div class="botoes">
+        <button [routerLink]="['/detalhes', m.id]">Detalhes</button>
+        <button [routerLink]="['/editar', m.id]">Editar</button>
+        <button (click)="eliminar(m.id)">Eliminar</button>
+      </div>
+    </div>
+  </div>
+
+  <button routerLink="/novo" class="btn-novo">Novo Membro</button>
+</div>

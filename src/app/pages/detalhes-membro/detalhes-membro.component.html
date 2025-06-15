@@ -1,0 +1,37 @@
+<div class="detalhes-container">
+
+
+ <div class="foto">
+  <img src="https://mesmear.co.uk/wp-content/uploads/person-placeholder.jpg" alt="Ícone do membro" class="icone-membro" />
+  <h2 class="nome-membro">{{ membro?.nome }}</h2>
+</div>
+  <div class="detalhecompleto">
+
+    <div class="detalhe">
+      <strong>Espécie:</strong> {{ membro?.especie }}
+    </div>
+    <div class="detalhe">
+      <strong>Função:</strong> {{ membro?.funcao }}
+    </div>
+    <div class="detalhe">
+      <strong>Estado:</strong> {{ membro?.estado }}
+    </div>
+    <div class="detalhe">
+      <strong>{{ membro?.especie === 'Humano' ? 'Data de Nascimento' : 'Data de Criação' }}:</strong>
+      {{ membro?.dataNascimentoCriacao }}
+    </div>
+    <div class="detalhe">
+      <strong>Setor/Departamento:</strong> {{ membro?.setorDepartamento }}
+    </div>
+    <div class="detalhe">
+      <strong>Contactos de Emergência:</strong> {{ membro?.contactosEmergencia }}
+    </div>
+    <div class="detalhe">
+      <strong>Notas/Observações:</strong> {{ membro?.notasObservacoes }}
+    </div>
+  </div>
+  <div class="botoes">
+    <button routerLink="/" class="btn-voltar">Voltar</button>
+    <button [routerLink]="['/editar', membro?.id]" class="btn-editar">Editar</button>
+  </div>
+</div>
